@@ -5,6 +5,11 @@ body {
   font-size:20px;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 .message-list {
     height:95%;
     overflow: scroll;
