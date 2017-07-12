@@ -1,5 +1,6 @@
 var socket = io.connect();
-$('#send-btn').on('click', function(event){
+$('#chatForm').on('submit', function(event){
+    event.preventDefault();
     var msg = $('#message').val();
     socket.emit('send message', msg);
     $('#message').val('');
@@ -7,5 +8,6 @@ $('#send-btn').on('click', function(event){
 
 socket.on('new message', function(data){
     $('.message-list').append(`<div>${data.msg}</div>`);
+    $('.message-list').scrollTop( $('.message-list')[0].scrollHeight);
     //console.log('Received message: '+data.msg);
 });
