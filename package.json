@@ -4,6 +4,7 @@
   "description": "Chat App",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Qi Zhang",
@@ -11,5 +12,8 @@
   "dependencies": {
     "express": "^4.15.3",
     "socket.io": "^2.0.3"
+  },
+  "engines":{
+    "node": "6.10.0"
   }
 }
